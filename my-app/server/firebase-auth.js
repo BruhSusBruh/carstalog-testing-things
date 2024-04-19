@@ -2,12 +2,13 @@ import firebase from "firebase/app";
 import "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "YOUR_API_KEY",
-  authDomain: "YOUR_PROJECT_ID.firebaseapp.com",
-  projectId: "YOUR_PROJECT_ID",
-  storageBucket: "YOUR_PROJECT_ID.appspot.com",
-  messagingSenderId: "YOUR_SENDER_ID",
-  appId: "YOUR_APP_ID"
+  apiKey: "AIzaSyAF_4PwHaFYejpj_JYgaA5pDV4SyicIo2M",
+  authDomain: "cars-talog.firebaseapp.com",
+  projectId: "cars-talog",
+  storageBucket: "cars-talog.appspot.com",
+  messagingSenderId: "862346088885",
+  appId: "1:862346088885:web:840dd9db456834ad3549fc",
+  measurementId: "G-X8MP59200M"
 };
 
 // Initialize Firebase
