@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { signUp, logIn } from './path_to/firebase-auth'; // Adjust the path as needed
+import { signUp, logIn } from '../server/firebase-auth'; // Adjust this path as needed based on actual file structure
 
 function TestAuth() {
   const [email, setEmail] = useState('');
@@ -8,8 +8,8 @@ function TestAuth() {
 
   const handleSignUp = async () => {
     try {
-      const user = await signUp(email, password);
-      console.log('Signup successful', user);
+      const userCredential = await signUp(email, password, username, phone);
+      console.log('Signup successful', userCredential.user);
       setError(null);
     } catch (error) {
       console.error('Signup failed', error);
@@ -19,8 +19,8 @@ function TestAuth() {
 
   const handleLogin = async () => {
     try {
-      const user = await logIn(email, password);
-      console.log('Login successful', user);
+      const userCredential = await logIn(email, password);
+      console.log('Login successful', userCredential.user);
       setError(null);
     } catch (error) {
       console.error('Login failed', error);
